@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using System;
 
 namespace pulsacionesdotnet
 {
@@ -21,16 +23,40 @@ namespace pulsacionesdotnet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            // In production, the Angular files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
+            services.AddSwaggerGen(c =>
             {
-                configuration.RootPath = "ClientApp/dist";
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1.0.3",
+                    Title = "Pulsaciones con Angular y ASP.NET Core Web API",
+                    Description = "Un simple ejemplo de como calcular las pulsaicones...",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Agner Villa",
+                        Email = string.Empty,
+                        Url = new Uri("https://twitter.com/spboyer"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
             });
+
+            // In production, the Angular files will be served from this directory
+            services
+                .AddSpaStaticFiles(configuration =>
+                {
+                    configuration.RootPath = "ClientApp/dist";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwagger();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -38,6 +64,7 @@ namespace pulsacionesdotnet
             else
             {
                 app.UseExceptionHandler("/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -48,28 +75,33 @@ namespace pulsacionesdotnet
             {
                 app.UseSpaStaticFiles();
             }
-
+            app
+                .UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                });
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
-            });
-
-            app.UseSpa(spa =>
-            {
-                // To learn more about options for serving an Angular SPA from ASP.NET Core,
-                // see https://go.microsoft.com/fwlink/?linkid=864501
-
-                spa.Options.SourcePath = "ClientApp";
-
-                if (env.IsDevelopment())
+            app
+                .UseEndpoints(endpoints =>
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
-            });
+                    endpoints
+                        .MapControllerRoute(name: "default",
+                        pattern: "{controller}/{action=Index}/{id?}");
+                });
+
+            app
+                .UseSpa(spa =>
+                {
+                    // To learn more about options for serving an Angular SPA from ASP.NET Core,
+                    // see https://go.microsoft.com/fwlink/?linkid=864501
+                    spa.Options.SourcePath = "ClientApp";
+
+                    if (env.IsDevelopment())
+                    {
+                        spa.UseAngularCliServer(npmScript: "start");
+                    }
+                });
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\bin\Debug\net5.0\Datos.deps.json
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\bin\Debug\net5.0\Datos.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\bin\Debug\net5.0\ref\Datos.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\bin\Debug\net5.0\Datos.pdb
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\bin\Debug\net5.0\Entity.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\bin\Debug\net5.0\Entity.pdb
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.csproj.AssemblyReference.cache
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.AssemblyInfoInputs.cache
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.AssemblyInfo.cs
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.csproj.CoreCompileInputs.cache
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.csproj.CopyComplete
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\ref\Datos.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Datos\obj\Debug\net5.0\Datos.pdb

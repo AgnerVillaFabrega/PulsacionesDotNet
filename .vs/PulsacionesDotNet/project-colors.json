@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f49882a5-3cae-47d4-8313-4e0f563ef0b6": {
+      "ProjectGuid": "f49882a5-3cae-47d4-8313-4e0f563ef0b6",
+      "DisplayName": "Datos",
+      "ColorIndex": 0
+    },
+    "73af77bb-dc83-49b9-98c1-b36c659b98c0": {
+      "ProjectGuid": "73af77bb-dc83-49b9-98c1-b36c659b98c0",
+      "DisplayName": "Entity",
+      "ColorIndex": 1
+    },
+    "00e827a3-73a7-462a-8829-15e825f8c57b": {
+      "ProjectGuid": "00e827a3-73a7-462a-8829-15e825f8c57b",
+      "DisplayName": "Logica",
+      "ColorIndex": 2
+    },
+    "9e301bb1-b77f-47e2-9fe3-f17ab0cdcadd": {
+      "ProjectGuid": "9e301bb1-b77f-47e2-9fe3-f17ab0cdcadd",
+      "DisplayName": "pulsacionesdotnet",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

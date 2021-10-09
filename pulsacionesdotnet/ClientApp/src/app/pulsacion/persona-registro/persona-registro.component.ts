@@ -9,20 +9,23 @@ import { Persona } from '../models/persona';
 })
 export class PersonaRegistroComponent implements OnInit {
   persona: Persona;
-  
+
   constructor(private personaService: PersonaService) {
     this.persona = new Persona();
-   }
-   calcularPulsa(){
+  }
+  calcularPulsa() {
     this.personaService.pulsa(this.persona);
   }
   ngOnInit() {
   }
-  add(){
-    this.calcularPulsa();
-    this.personaService.post(this.persona);
-    alert('se creo la persona'+ JSON.stringify(this.persona));
+  add() {
+    this.personaService.post(this.persona).subscribe(p => {
+      if (p != null) {
+        alert('Persona creada!');
+        this.persona = p;
+      }
+    });
   }
-  
+
 
 }

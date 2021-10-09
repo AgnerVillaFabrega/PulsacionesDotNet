@@ -1,11 +1,21 @@
-import { Injectable } from "@angular/core";
+import { Inject, Injectable } from "@angular/core";
 import { Persona } from "../pulsacion/models/persona";
-
+import { Observable } from "rxjs";
+import { tap,catchError} from 'rxjs/operators';
+import { HttpClient } from "@angular/common/http";
+import { HandleHttpErrorService } from "../@base/handle-http-error.service";
 @Injectable({
   providedIn: "root",
 })
 export class PersonaService {
-  constructor() {}
+  baseUrl: string;
+  constructor(
+    private http: HttpClient,
+    @Inject('BASE_URL') baseUrl: string,
+    private handleErrorService: HandleHttpErrorService)
+  {
+    this.baseUrl = baseUrl;
+  }
   
   pulsa(persona: Persona):number { 
     if (persona.sexo == "F") {
@@ -15,15 +25,20 @@ export class PersonaService {
     }
     return persona.pulsacion
   }
-  get(): Persona[] {
-    return JSON.parse(localStorage.getItem("datos") || '[]');
+
+  get(): Observable<Persona[]>{
+    return this.http.get<Persona[]>(this.baseUrl+'api/Persona')
+      .pipe(
+        tap(_ => this.handleErrorService.log('Datos enviados')),
+        catchError(this.handleErrorService.handleError<Persona[]>('Consulta Persona',null))
+      );
   }
-  post(persona: Persona) {
-    let personas: Persona[] = [];
-    if (this.get() != null) {
-      personas = this.get();
-    }
-    personas.push(persona);
-    localStorage.setItem("datos", JSON.stringify(personas));
+
+  post(persona: Persona): Observable<Persona> {
+    return this.http.post<Persona>(this.baseUrl+ 'api/Persona', persona)
+      .pipe(
+        tap(_ => this.handleErrorService.log('Datos enviados')),
+        catchError(this.handleErrorService.handleError<Persona>('Registrar Persona',null))
+      );
   }
 }

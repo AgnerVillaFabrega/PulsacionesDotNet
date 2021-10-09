@@ -1,0 +1,17 @@
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Logica.deps.json
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Logica.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\ref\Logica.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Logica.pdb
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Datos.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Entity.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Datos.pdb
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\bin\Debug\net5.0\Entity.pdb
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\ref\Logica.dll
+C:\Users\agner\Desktop\P-Web\PulsacionesDotNet\Logica\obj\Debug\net5.0\Logica.pdb
